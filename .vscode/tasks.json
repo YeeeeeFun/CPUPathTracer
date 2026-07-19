@@ -1,0 +1,69 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake: configure Release",
+            "type": "process",
+            "command": "C:/msys64/mingw64/bin/cmake.exe",
+            "args": [
+                "-S",
+                "${workspaceFolder}",
+                "-B",
+                "${workspaceFolder}/build",
+                "-G",
+                "MinGW Makefiles",
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake: build Release",
+            "type": "process",
+            "command": "C:/msys64/mingw64/bin/cmake.exe",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build",
+                "--parallel",
+                "8"
+            ],
+            "dependsOn": "CMake: configure Release",
+            "dependsOrder": "sequence",
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "CMake: configure Debug",
+            "type": "process",
+            "command": "C:/msys64/mingw64/bin/cmake.exe",
+            "args": [
+                "-S",
+                "${workspaceFolder}",
+                "-B",
+                "${workspaceFolder}/build-debug",
+                "-G",
+                "MinGW Makefiles",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake: build Debug",
+            "type": "process",
+            "command": "C:/msys64/mingw64/bin/cmake.exe",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build-debug",
+                "--parallel",
+                "8"
+            ],
+            "dependsOn": "CMake: configure Debug",
+            "dependsOrder": "sequence",
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+# 统一源码和配置文件的换行符，避免不同平台产生无意义差异。
+* text=auto
+
+*.h text eol=lf
+*.cpp text eol=lf
+*.cc text eol=lf
+*.cmake text eol=lf
+CMakeLists.txt text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.obj text eol=lf
+*.mtl text eol=lf
+*.svg text eol=lf
+
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.tga binary
+*.tif binary
+*.3ds binary
+*.blend binary

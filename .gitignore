@@ -1,0 +1,20 @@
+build*/
+.idea/
+.vscode/*
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+# Generated render output
+*.ppm
+
+# Local build artifacts
+*.exe
+*.o
+*.obj
+*.pdb
+
+# Keep Wavefront model assets while continuing to ignore compiler object files.
+!models/*.obj
+!models/**/*.obj
+!tests/fixtures/*.obj
