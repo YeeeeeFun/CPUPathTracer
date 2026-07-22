@@ -81,7 +81,7 @@ For every non-specular bounce, the integrator chooses either light sampling or m
 ### Command line
 
 ```powershell
-git clone https://github.com/YeeeeeFun/CPUPathTracer.git
+git clone https://github.com/YiiiFun/CPUPathTracer.git
 cd CPUPathTracer
 
 cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
