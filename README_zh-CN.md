@@ -81,7 +81,7 @@ CPUPathTracer 是一个使用 C++17 实现的 CPU 离线渲染器，用于完整
 ### 终端运行
 
 ```powershell
-git clone https://github.com/YeeeeeFun/CPUPathTracer.git
+git clone https://github.com/YiiiFun/CPUPathTracer.git
 cd CPUPathTracer
 
 cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
